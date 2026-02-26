@@ -1,12 +1,23 @@
 import Link from "next/link";
 
 export default function Footer() {
+
+    const linkCss = "pl-2 pr-2 border-s-2 transition-all duration-200 ease-in hover:bg-black hover:text-white hover:pl-5 hover:pr-5";
+    
     return (
-        <div className="mb-18 text-l text-justify">
-            <Link href="/works"> Works</Link> |
-            <Link href="/exhibitions"> Exhibitions</Link> |
-            <Link href="/about"> About</Link> |
-            <Link href="/contact"> Contact</Link>
+        <div className="flex mb-18 text-l text-justify">
+            <div className={linkCss}>
+                <Link href="/works">works</Link>
+            </div>
+            <div className={linkCss}> 
+                <Link href="/exhibitions">exhibitions</Link>
+            </div>
+            <div className={linkCss}>
+                <Link href="/about">about</Link>
+            </div>
+            <div className={linkCss}>
+                <Link href="/contact">contact</Link>
+            </div>
         </div>
     )
 }
