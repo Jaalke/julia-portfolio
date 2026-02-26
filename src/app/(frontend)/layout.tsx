@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="ml-20">
-          <h1 className="mt-18 mb-18 text-5xl">Julia Szczerbowska</h1>
+          <h1 className="mt-18 mb-18 text-5xl font-serif">Julia Szczerbowska</h1>
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
