@@ -25,6 +25,10 @@ export const Contact: GlobalConfig = {
         {
             name: "phone",
             type: "text"
+        },
+        {
+            name: "instagram",
+            type: "text"
         }
     ]
 }

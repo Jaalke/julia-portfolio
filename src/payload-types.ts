@@ -89,9 +89,11 @@ export interface Config {
   fallbackLocale: null;
   globals: {
     bio: Bio;
+    contact: Contact;
   };
   globalsSelect: {
     bio: BioSelect<false> | BioSelect<true>;
+    contact: ContactSelect<false> | ContactSelect<true>;
   };
   locale: null;
   user: User;
@@ -329,11 +331,35 @@ export interface Bio {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact".
+ */
+export interface Contact {
+  id: number;
+  email?: string | null;
+  phone?: string | null;
+  instagram?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "bio_select".
  */
 export interface BioSelect<T extends boolean = true> {
   bioText?: T;
   pic?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact_select".
+ */
+export interface ContactSelect<T extends boolean = true> {
+  email?: T;
+  phone?: T;
+  instagram?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
