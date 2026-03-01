@@ -15,5 +15,6 @@ export default async function Contact() {
     {contact?.email && (<div className="flex flex-cols-2 gap-12"><Mail/>{contact.email}</div>)}
     {contact?.phone && (<div className="flex flex-cols-2 gap-12"><Phone/>{contact.phone}</div>)}
     {contact?.instagram && (<div className="flex flex-cols-2 gap-12"><Camera/>{contact.instagram}</div>)}
-  </div>);
+  </div>
+  );
 }

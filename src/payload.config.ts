@@ -7,6 +7,7 @@ import sharp from "sharp";
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
+import { Works } from "./collections/Works";
 
 import { Bio, Contact } from "./payload-globals";
 
@@ -20,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Works],
   editor: lexicalEditor(),
   globals: [
     Bio,
