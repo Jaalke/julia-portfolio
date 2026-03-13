@@ -9,6 +9,10 @@ export default async function Works() {
     collection: "works"
   });
 
+  works.docs.sort( (a, b) => {
+    return Date.parse(b.date) - Date.parse(a.date)
+  });
+
   return (
     <div>
       {works.docs.map( (work, i) => {
