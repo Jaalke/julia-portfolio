@@ -1,7 +1,6 @@
-import { format } from "date-fns";
 import { getPayload } from "payload";
 import config from "@payload-config";
-import PayloadImage from "../components/payloadImage";
+import WorkListing from "../components/workListing";
 
 export default async function Works() {
 
@@ -11,18 +10,14 @@ export default async function Works() {
   });
 
   return (
-  <div>
-    {works.docs.map( (work, i) => {
-      return (
-      <div key={`${i}`}>
-        <div className="mt-10 mb-2 flex flex-row text-xl">
-          <h2 className="italic font-serif">{work.name}</h2>
-          <p className="pl-3 font-sans font-extralight">{format(work.date, "LLLL, yyyy")}</p>
+    <div>
+      {works.docs.map( (work, i) => {
+        return (
+        <div key={`${i}`}>
+          <WorkListing work={work}/>
         </div>
-        <PayloadImage pic={work.image} size={800}></PayloadImage>
-      </div>
-    );
-    })}
-  </div>
-);
+      );
+      })}
+    </div>
+  );
 }
