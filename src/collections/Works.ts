@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import { flattenAllFields, type CollectionConfig } from 'payload'
 
 export const Works: CollectionConfig = {
     slug: "works",
@@ -15,6 +15,16 @@ export const Works: CollectionConfig = {
             admin: {
                 rows: 15
             }
+        },
+        {
+            name: "material",
+            type: "text",
+            required: true
+        },
+        {
+            name: "dimensions",
+            type: "text",
+            required: true
         },
         {
             name: "date",

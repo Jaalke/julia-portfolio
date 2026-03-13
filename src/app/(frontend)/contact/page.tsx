@@ -12,9 +12,18 @@ export default async function Contact() {
 
   return ( 
   <div className="grid grid-cols-1 gap-3">
-    {contact?.email && (<div className="flex flex-cols-2 gap-12"><Mail/>{contact.email}</div>)}
-    {contact?.phone && (<div className="flex flex-cols-2 gap-12"><Phone/>{contact.phone}</div>)}
-    {contact?.instagram && (<div className="flex flex-cols-2 gap-12"><Camera/>{contact.instagram}</div>)}
+    {contact?.email && (
+      <div className="flex flex-cols-2 gap-12">
+        <Mail/>{contact.email}
+      </div>)}
+    {contact?.phone && (
+      <div className="flex flex-cols-2 gap-12">
+        <Phone/>{contact.phone}
+      </div>)}
+    {contact?.instagram && (
+      <div className="flex flex-cols-2 gap-12">
+        <Camera/><a>{contact.instagram}</a>
+      </div>)}
   </div>
   );
 }
