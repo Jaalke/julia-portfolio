@@ -1,19 +1,18 @@
 import { Media } from "../../../payload-types";
-import Image from "next/image";
 
 interface PayloadImageProps {
     pic: number | Media | null | undefined,
-    size?: number
+    size?: number,
+    className?: string
 }
 
 export default function PayloadImage(props: PayloadImageProps) {
     if (typeof props.pic !== "string" && typeof props.pic !== "number" && props?.pic?.url) {
-        return (<Image
+        return (<img
+        className={props?.className}
         src={props.pic.url}
-        alt="Media"
-        width={props.size ?? "100"}
-        height={props.size ?? "100"}
-    />);} else {
+        alt="Media"/>);
+    } else {
         return (null);
     }
 }

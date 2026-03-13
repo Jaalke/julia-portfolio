@@ -22,7 +22,7 @@ export default async function Contact() {
       </div>)}
     {contact?.instagram && (
       <div className="flex flex-cols-2 gap-12">
-        <Camera/><a target="blank" href={`https://instagram.com/${contact.instagram}`} className="hover:cursor-pointer">@{contact.instagram}</a>
+        <Camera/><a target="blank" href={`https://instagram.com/${contact.instagram}`} className="hover:cursor-pointer text-blue-900">@{contact.instagram}</a>
       </div>)}
   </div>
   );

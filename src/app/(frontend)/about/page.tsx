@@ -18,7 +18,7 @@ export default async function About() {
         {bio.bioText || "Yes"}
       </p>
       <p className="ml-20">
-        <PayloadImage pic={bio.pic} size={130}></PayloadImage>
+        <PayloadImage pic={bio.pic} className="w-72"></PayloadImage>
       </p>
     </div>
   );
