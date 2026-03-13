@@ -4,8 +4,16 @@ export const Bio: GlobalConfig = {
     slug: "bio",
     fields: [
         {
+            name: "name",
+            type: "text",
+            defaultValue: "Firstname Lastname"
+        },
+        {
             name: "bioText",
-            type: "textarea"
+            type: "textarea",
+            admin: {
+                rows: 25
+            }
         },
         {
             name: "pic",
