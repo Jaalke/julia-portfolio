@@ -2,6 +2,8 @@ import { getPayload } from "payload";
 import config from "@payload-config";
 import WorkListing from "../components/workListing";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Works() {
 
   const payload = await getPayload({ config });

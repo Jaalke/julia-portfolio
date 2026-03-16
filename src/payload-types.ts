@@ -173,8 +173,11 @@ export interface Media {
 export interface Work {
   id: number;
   name: string;
+  description: string;
+  material: string;
+  dimensions: string;
   date: string;
-  image?: (number | null) | Media;
+  image: number | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -302,6 +305,9 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface WorksSelect<T extends boolean = true> {
   name?: T;
+  description?: T;
+  material?: T;
+  dimensions?: T;
   date?: T;
   image?: T;
   updatedAt?: T;
@@ -353,6 +359,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Bio {
   id: number;
+  name?: string | null;
   bioText?: string | null;
   pic?: (number | null) | Media;
   updatedAt?: string | null;
@@ -375,6 +382,7 @@ export interface Contact {
  * via the `definition` "bio_select".
  */
 export interface BioSelect<T extends boolean = true> {
+  name?: T;
   bioText?: T;
   pic?: T;
   updatedAt?: T;

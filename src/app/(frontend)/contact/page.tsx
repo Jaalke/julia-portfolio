@@ -2,6 +2,8 @@ import { getPayload } from "payload";
 import config from "@payload-config";
 import { Mail, Phone, Camera } from "lucide-react";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Contact() {
 
   const payload = await getPayload({ config });

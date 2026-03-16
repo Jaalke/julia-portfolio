@@ -2,6 +2,8 @@ import { getPayload } from "payload";
 import config from "@payload-config";
 import PayloadImage from "../components/payloadImage";
 
+export const dynamic = 'force-dynamic';
+
 export default async function About() {
 
   const payload = await getPayload({ config });

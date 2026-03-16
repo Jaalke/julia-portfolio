@@ -33,7 +33,7 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost:5432/${process.env.DB}`,
+      connectionString: `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@db:5432/${process.env.DB}`,
     },
   }),
   sharp,

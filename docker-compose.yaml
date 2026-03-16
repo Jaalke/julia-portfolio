@@ -11,5 +11,22 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "postgresql://$DB_USER:$DB_PASSWORD@db:5432/$DB"
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD", "curl", "http://localhost:3000"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+
 volumes:
   postgres_data:

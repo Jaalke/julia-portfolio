@@ -1,6 +1,8 @@
 import { getPayload } from "payload";
 import config from "@payload-config";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Footer() {
 
   const payload = await getPayload({ config });
