@@ -19,7 +19,7 @@ export default async function About() {
       <p className="w-120 text-justify">
         {bio.bioText || "Yes"}
       </p>
-      <p className="ml-20">
+      <p className="md:ml-20 ml-8">
         <PayloadImage pic={bio.pic} className="w-72"></PayloadImage>
       </p>
     </div>

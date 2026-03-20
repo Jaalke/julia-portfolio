@@ -14,7 +14,7 @@ export default async function Footer() {
 
     return (
         <div>
-            <h1 className="mt-18 mb-18 text-5xl font-serif">{bio.name}</h1>
+            <h1 className="mt-18 md:mb-18 mb-10 text-5xl font-serif">{bio.name}</h1>
             <div className="flex mb-18 text-l text-justify">
                 <div className={linkCss}>
                     <Link href="/works">works</Link>

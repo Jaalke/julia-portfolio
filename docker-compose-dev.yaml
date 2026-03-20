@@ -1,7 +1,7 @@
 services:
   db:
     image: postgres:16-alpine
-    restart: always
+    restart: on-failure
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}

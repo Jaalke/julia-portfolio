@@ -29,10 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="ml-80 mr-80">
+        <div className="md:ml-80 md:mr-80 ml-20 mr-20">
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
