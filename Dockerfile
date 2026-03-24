@@ -68,10 +68,6 @@ COPY --from=builder --chown=bun:bun /app/public ./public
 RUN mkdir .next
 RUN chown bun:bun .next
 
-# Setup a media folder with permissions
-RUN mkdir media
-RUN chown bun:bun media
-
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=bun:bun /app/.next/standalone ./
