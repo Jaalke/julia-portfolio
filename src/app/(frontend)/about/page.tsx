@@ -15,13 +15,9 @@ export default async function About() {
   console.log(bio.pic);
 
   return (
-    <div className="flex">
-      <p className="w-120 text-justify">
-        {bio.bioText || "Yes"}
-      </p>
-      <p className="md:ml-20 ml-8">
-        <PayloadImage pic={bio.pic} className="w-72"></PayloadImage>
-      </p>
+    <div className="max-w-150">
+      <PayloadImage pic={bio.pic} className="w-20 ml-8 float-right"></PayloadImage>
+      <p className="text-justify">{bio.bioText || "Yes"}</p>
     </div>
   );
 }
